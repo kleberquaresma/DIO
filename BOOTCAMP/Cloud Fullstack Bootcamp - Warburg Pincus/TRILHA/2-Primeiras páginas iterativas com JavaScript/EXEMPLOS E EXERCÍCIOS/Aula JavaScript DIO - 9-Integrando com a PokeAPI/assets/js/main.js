@@ -62,3 +62,14 @@ fetch(url)
     .then((jsonBody) => console.log(jsonBody)) /* Este segundo Then recebe a resposta do primeiro Then */
     .catch((error) => console.log(error))
     .finally(() => console.log('Requisição concluída'))
+
+
+/* EXEMPLO 05: Uso do "Debugger". Para ajudar a debugar JavaScript no Browser, ou mesmo no note. */
+fetch(url)
+    .then((response) => response.json())
+    .then((jsonBody) => {  /* Este segundo Then recebe a resposta do primeiro Then */
+        debugger
+        console.log(jsonBody)
+    })
+    .catch((error) => console.log(error))
+    .finally(() => console.log('Requisição concluída'))
