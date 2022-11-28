@@ -41,3 +41,4 @@ Existem vários normalizadores. Um deles é o *normalizer.css*.
 		https://www.w3schools.com/css/
 		https://pokeapi.co/api/v2/pokemon
 		https://nekocalc.com/px-to-rem-converter
+		https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API (requisição HTTP)
