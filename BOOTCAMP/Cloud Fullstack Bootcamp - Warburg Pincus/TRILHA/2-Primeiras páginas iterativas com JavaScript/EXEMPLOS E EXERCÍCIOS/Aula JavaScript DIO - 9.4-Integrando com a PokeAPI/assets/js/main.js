@@ -1,19 +1,15 @@
-// Funções base para criação da lista de Pokemons.
-
-function convertPokemonTypeToLi(pokemonTypes) {
-    return pokemonTypes.map((typeSlot) => `<li class="type">${typeSlot.type.name}</li>`)
-}
+// Função base para criação da lista de Pokemons.
 
 function convertPokemonToLi(pokemon){
     return `
-            <li class="pokemon">
-                <spam class="number">${pokemon.order}</spam>
+            <li class="pokemon ${pokemon.type}">
+                <spam class="number">${pokemon.number}</spam>
                 <spam class="name">${pokemon.name}</spam>
                 <div class="detail">
                     <ol class="types">
-                        ${convertPokemonTypeToLi(pokemon.types).join('')}
+                        ${pokemon.types.map((type) => `li class="type">${type}</li>`).join('')}
                     </ol>
-                    <img src="${pokemon.sprites.other.dream_world.front_default}" alt='${pokemon.name}'>
+                    <img src="${pokemon.photo}" alt="${pokemon.name}">
                 </div>
             </li>
             `
