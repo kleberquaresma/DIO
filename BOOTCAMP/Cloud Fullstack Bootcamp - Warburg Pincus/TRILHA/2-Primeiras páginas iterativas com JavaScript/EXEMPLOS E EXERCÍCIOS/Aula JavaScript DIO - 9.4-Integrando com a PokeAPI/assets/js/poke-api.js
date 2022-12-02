@@ -23,7 +23,7 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
             .then(convertPokeApiDetailToPokemon)
     }
 
-    pokeApi.getPokemons = (offset = 0, limit = 10) => { // usando Arrow Function e passando valores default
+    pokeApi.getPokemons = (offset = 0, limit = 20) => { // usando Arrow Function e passando valores default
         const url=`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
         return fetch(url)
         .then((response) => response.json())
